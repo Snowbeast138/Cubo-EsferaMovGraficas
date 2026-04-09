@@ -17,6 +17,10 @@ public partial class Form1 : Form
     private int paralelos = 5;  
     private int meridianos = 10; 
 
+    private int radio = 10;
+
+    private Label CoordsEsfera;
+
     public Form1()
     {
         InitializeComponent();
@@ -27,6 +31,7 @@ public partial class Form1 : Form
         this.Paint += Form1_Paint;
 
         CrearBotones();
+        updateLabel();
     }
 
 private void CrearBotones()
@@ -42,23 +47,22 @@ private void CrearBotones()
         this.Controls.Add(lblInstrucciones);
 
         Button btnXMas = new Button() { Text = "+X", Location = new Point(10, 20), Width = 40 };
-        btnXMas.Click += (s, e) => { posCuboX += 10; this.Invalidate(); }; // Invalidate() fuerza el repintado
+        btnXMas.Click += (s, e) => { posCuboX += 10; this.Invalidate(); updateLabel(); }; // Invalidate() fuerza el repintado
         
         Button btnXMenos = new Button() { Text = "-X", Location = new Point(55, 20), Width = 40 };
-        btnXMenos.Click += (s, e) => { posCuboX -= 10; this.Invalidate(); };
+        btnXMenos.Click += (s, e) => { posCuboX -= 10; this.Invalidate(); updateLabel(); };
 
         Button btnYMas = new Button() { Text = "+Y", Location = new Point(10, 50), Width = 40 };
-        btnYMas.Click += (s, e) => { posCuboY -= 10; this.Invalidate(); };
+        btnYMas.Click += (s, e) => { posCuboY -= 10; this.Invalidate(); updateLabel(); };
         
         Button btnYMenos = new Button() { Text = "-Y", Location = new Point(55, 50), Width = 40 };
-        btnYMenos.Click += (s, e) => { posCuboY += 10; this.Invalidate(); };
+        btnYMenos.Click += (s, e) => { posCuboY += 10; this.Invalidate(); updateLabel(); };
 
         Button btnZMas = new Button() { Text = "+Z", Location = new Point(10, 80), Width = 40 };
-        btnZMas.Click += (s, e) => { posCuboZ -= 10; this.Invalidate(); };
+        btnZMas.Click += (s, e) => { posCuboZ -= 10; this.Invalidate(); updateLabel(); };
         
         Button btnZMenos = new Button() { Text = "-Z", Location = new Point(55, 80), Width = 40 };
-        btnZMenos.Click += (s, e) => { posCuboZ += 10; this.Invalidate(); };
-
+        btnZMenos.Click += (s, e) => { posCuboZ += 10; this.Invalidate(); updateLabel(); };
 
 
         Label lblInstruccionesEsfera = new Label()
@@ -71,37 +75,65 @@ private void CrearBotones()
         this.Controls.Add(lblInstruccionesEsfera);
 
         Button btnXMasEsfera = new Button() { Text = "+X", Location = new Point(10, 130), Width = 40 };
-        btnXMasEsfera.Click += (s, e) => { posEsferaX += 10; this.Invalidate(); }; // Invalidate() fuerza el repintado
+        btnXMasEsfera.Click += (s, e) => { posEsferaX += 10; this.Invalidate(); updateLabel(); }; 
         
         Button btnXMenosEsfera = new Button() { Text = "-X", Location = new Point(55, 130), Width = 40 };
-        btnXMenosEsfera.Click += (s, e) => { posEsferaX -= 10; this.Invalidate(); };
+        btnXMenosEsfera.Click += (s, e) => { posEsferaX -= 10; this.Invalidate(); updateLabel(); };
 
         Button btnYMasEsfera = new Button() { Text = "+Y", Location = new Point(10, 160), Width = 40 };
-        btnYMasEsfera.Click += (s, e) => { posEsferaY -= 10; this.Invalidate(); };
+        btnYMasEsfera.Click += (s, e) => { posEsferaY -= 10; this.Invalidate(); updateLabel(); };
         
         Button btnYMenosEsfera = new Button() { Text = "-Y", Location = new Point(55, 160), Width = 40 };
-        btnYMenosEsfera.Click += (s, e) => { posEsferaY += 10; this.Invalidate(); };
+        btnYMenosEsfera.Click += (s, e) => { posEsferaY += 10; this.Invalidate(); updateLabel(); };
     
         Button btnZMasEsfera = new Button() { Text = "+Z", Location = new Point(10, 190), Width = 40 };
-        btnZMasEsfera.Click += (s, e) => { posEsferaZ -= 10; this.Invalidate(); };
+        btnZMasEsfera.Click += (s, e) => { posEsferaZ -= 10; this.Invalidate(); updateLabel(); };
         
         Button btnZMenosEsfera = new Button() { Text = "-Z", Location = new Point(55, 190), Width = 40 };
-        btnZMenosEsfera.Click += (s, e) => { posEsferaZ += 10; this.Invalidate(); };
+        btnZMenosEsfera.Click += (s, e) => { posEsferaZ += 10; this.Invalidate(); updateLabel(); };
 
 
         Label lbSizeEsfera = new Label()
         {
-            Text = "Cantidad Caras esfera:",
+            Text = "Dimensiones Esfera:",
             Location = new Point(10, 220),
             AutoSize = true
         };
 
         this.Controls.Add(lbSizeEsfera);
 
-        Button btnAumentarParalelos = new Button() { Text = "+P", Location = new Point(10, 240), Width = 40 };
-        btnAumentarParalelos.Click += (s, e) => { paralelos += 1; this.Invalidate(); };
-        Button btnDisminuirParalelos = new Button() { Text = "-P", Location = new Point(55, 240), Width = 40 };
-        btnDisminuirParalelos.Click += (s, e) => { if (paralelos > 1) paralelos -= 1; this.Invalidate(); };
+        Button btnAumentarParalelos = new Button() { Text = "+H", Location = new Point(10, 240), Width = 40 };
+        btnAumentarParalelos.Click += (s, e) => { paralelos += 1; this.Invalidate(); updateLabel(); };
+        Button btnDisminuirParalelos = new Button() { Text = "-H", Location = new Point(55, 240), Width = 40 };
+        btnDisminuirParalelos.Click += (s, e) => { if (paralelos > 1) paralelos -= 1; this.Invalidate(); updateLabel(); };
+        
+        Button btnAumentarMeridianos = new Button() { Text = "+V", Location = new Point(10, 270), Width = 40 };
+        btnAumentarMeridianos.Click += (s, e) => { meridianos += 1; this.Invalidate(); updateLabel(); };
+        
+        Button btDisminuirMeridianos = new Button() { Text = "-V", Location = new Point(55, 270), Width = 40 };
+        btDisminuirMeridianos.Click += (s, e) => { if (meridianos > 1) meridianos -= 1; this.Invalidate(); updateLabel(); };
+
+        Button btRadioMas = new Button() { Text = "+R", Location = new Point(10, 300), Width = 40 };
+        btRadioMas.Click += (s, e) => { radio += 5; this.Invalidate(); updateLabel(); };
+        Button btRadioMenos = new Button() { Text = "-R", Location = new Point(55, 300), Width = 40 };
+        btRadioMenos.Click += (s, e) => { radio -= 5; this.Invalidate(); updateLabel(); };
+
+
+        Label lbCoordsEsfera = new Label()
+        {
+            Text = "Coordenadas Esfera:",
+            Location = new Point(10, 330),
+            AutoSize = true
+        };
+        this.Controls.Add(lbCoordsEsfera);
+
+        CoordsEsfera = new Label()
+        {
+            Text = $"X: {posEsferaX} Y: {posEsferaY} Z: {posEsferaZ}",
+            Location = new Point(10, 350),
+            AutoSize = true
+        };
+        this.Controls.Add(CoordsEsfera);
 
 
         this.Controls.Add(btnXMenosEsfera);
@@ -118,7 +150,19 @@ private void CrearBotones()
         this.Controls.Add(btnZMenos);
         this.Controls.Add(btnAumentarParalelos);
         this.Controls.Add(btnDisminuirParalelos);
+        this.Controls.Add(btnAumentarMeridianos);
+        this.Controls.Add(btDisminuirMeridianos);
+        this.Controls.Add(btRadioMas);
+        this.Controls.Add(btRadioMenos);
 
+    }
+
+    private void updateLabel()
+    {
+        if(CoordsEsfera != null)
+        {
+            CoordsEsfera.Text = $"X: {posEsferaX} Y: {posEsferaY} Z: {posEsferaZ}";
+        }
     }
 
 
@@ -162,7 +206,7 @@ private void CrearBotones()
         g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
         Pen penEsfera = new Pen(Color.Blue, 1); 
 
-        int radio = 80;
+       
         int centroX = 350 + posEsferaX; 
         int centroY = 200 + posEsferaY;
 

@@ -12,3 +12,4 @@ C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\
 C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.pdb
 C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.genruntimeconfig.cache
 C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\ref\Cubo-EsferaMovGraficas.dll
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.sourcelink.json
