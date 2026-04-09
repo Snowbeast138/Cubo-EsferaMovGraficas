@@ -1,0 +1,14 @@
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\bin\Debug\net10.0-windows\Cubo-EsferaMovGraficas.exe
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\bin\Debug\net10.0-windows\Cubo-EsferaMovGraficas.deps.json
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\bin\Debug\net10.0-windows\Cubo-EsferaMovGraficas.runtimeconfig.json
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\bin\Debug\net10.0-windows\Cubo-EsferaMovGraficas.dll
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\bin\Debug\net10.0-windows\Cubo-EsferaMovGraficas.pdb
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.AssemblyInfoInputs.cache
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.AssemblyInfo.cs
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.csproj.CoreCompileInputs.cache
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.dll
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\refint\Cubo-EsferaMovGraficas.dll
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.pdb
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\Cubo-EsferaMovGraficas.genruntimeconfig.cache
+C:\Users\snowb\OneDrive\Escritorio\CETI_ING\6to\Graficas\Cubo-EsferaMovGraficas\obj\Debug\net10.0-windows\ref\Cubo-EsferaMovGraficas.dll
